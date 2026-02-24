@@ -1,13 +1,5 @@
 # Banco de dados 🎲
 
-##### 📍SENAI Lindolfo Collor
-##### 📍Desenvolvimento de Sistemas (DS)
-##### 📍Professor Maurício de Souza
-##### 📍Turma Ana Néri - 3° B
-##### 📍Maria Eduarda Bohrer Magagna
-##### 📍20.02.2026
----
-
 ### 🧐 O que são banco de dados? 
 
 São **dados coletados e armazenados** de forma **organizada** em um espaço eletrônico, **SGBD** (Sistema Gerenciador de Banco de Ddos) ou **DBMS** (Data Base Management)
