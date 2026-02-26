@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>Banco de dados: Aula 2</title>
+    </head>
+    <body>
+        <h1>Arquitetura de dados</h1>
+        <h3>Relacional x Não relacional</h3>
+        <br>
+        <h3>Oque é arquitetura de Banco de Dados?</h3>
+        <p>É como/forma que os dados são organizados/armazenados.</p>
+        <h3>Pilares dos bancos de dados:</h3>
+        <ol>
+            <li>Salvar</li>
+            <li>Buscar</li>
+            <li>Relacionar</li>
+        </ol>
+        <h3>Relacional</h3>
+        <ul>
+            <li><b>O que é?</b> Dados organizados em tabelas que se relacionam entre si.</li>
+            <li>Cada tabela representa uma <b>entidade específica.</b></li>
+            <br>
+            <table border="1">
+                <tr>
+                    <th> </th>
+                    <th>Aluno 1</th>
+                    <th>Aluno 2</th>
+                </tr>
+                <!-- Linha de Dado 1 -->
+                 <tr>
+                     <td>Nota</td>
+                     <td>10</td>
+                     <td>5</td>
+                 </tr>
+                 <!-- Linha de Dado 2 -->
+                 <tr>
+                     <td>Idade</td>
+                     <td>16</td>
+                     <td>17</td>
+                 </tr>
+            </table>
+            <p><b><em>Linhas (tuplas): Registro único.</em></b></p>
+            <p><b><em>Colunas (atributos): Tipo de informação.</em></b></p>
+            <li><b>Chaves primárias (ID):</b>Identificador único que distingue de outros dados.</li>
+            <li><b>Evita duplicação</b> de dados.</li>
+            <li>Exemplos:</li>
+            <br>
+            <table border="1">
+                <tr>
+                    <th>Tabela Livro</th>
+                    <th>...</th>
+                </tr>
+                <!-- Linha de Dado 1 -->
+                 <tr>
+                     <td>Nome</td>
+                     <td>...</td>
+                 </tr>
+                 <!-- Linha de Dado 2 -->
+                 <tr>
+                     <td>Autor</td>
+                     <td>...</td>
+                 </tr>
+                 <tr>
+                     <td>Empréstimo</td>
+                     <td>...</td>
+                 </tr>
+                 <tr>
+                     <td>ID</td>
+                     <td>...</td>
+                 </tr>
+            </table>
+            <br>
+            <table border="1">
+                <tr>
+                    <th>Tabela Produto</th>
+                    <th>...</th>
+                </tr>
+                <!-- Linha de Dado 1 -->
+                 <tr>
+                     <td>ID</td>
+                     <td>...</td>
+                 </tr>
+                 <!-- Linha de Dado 2 -->
+                 <tr>
+                     <td>Nome</td>
+                     <td>...</td>
+                 </tr>
+                 <tr>
+                     <td>Preço</td>
+                     <td>...</td>
+                 </tr>
+                 <tr>
+                     <td>Estoque</td>
+                     <td>...</td>
+                 </tr>
+            </table>
+            <br>
+            <table border="1">
+                <tr>
+                    <th>Tabela Funcionários</th>
+                    <th>...</th>
+                </tr>
+                <!-- Linha de Dado 1 -->
+                 <tr>
+                     <td>ID</td>
+                     <td>...</td>
+                 </tr>
+                 <!-- Linha de Dado 2 -->
+                 <tr>
+                     <td>Nome</td>
+                     <td>...</td>
+                 </tr>
+                 <tr>
+                     <td>Cargo</td>
+                     <td>...</td>
+                 </tr>
+                 <tr>
+                     <td>Data Admissão</td>
+                     <td>...</td>
+                 </tr>
+                 <tr>
+                     <td>Departamento</td>
+                     <td>...</td>
+                 </tr>
+                 <tr>
+                     <td>Salário</td>
+                     <td>...</td>
+                 </tr>
+            </table>
+        </ul>
+    </body>
+</html>
