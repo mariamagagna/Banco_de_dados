@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Banco de dados: Aula 3</title>
+    </head>
+    <body>
+        <h1>Modelagem de dados</h1>
+
+        <h3>O que é modelagem de Banco de Dados??</h3>
+        <p>Processo de <b>representar a estrutura lógica</b> de um sistema de informação,
+             criando um <b>mapa visual</b> de como os dados serão armazenados, organizados e relacionados.
+            Basicamente, criar uma <b>planta baixa</b> para a estrutura do banco de dados.</p>
+            <br>
+
+            <li>Características de uma <b>boa modelagem</b> de Banco de Dados:</li>
+            <ol>
+                <li><b><em>Integridade:</em></b>Dados <b>corretos e consistentes</b> (sem duplicações ou referências quebradas).</li>
+                <li><b><em>Performance:</em></b> Estrutura <b>bem modelada</b>, permite consultas <b>rápidas</b> e operações <b>eficientes.</b></li>
+                <li><b><em>Manutennbilidade:</em></b> Facilita futuras modificações e expansões do sistema sem quebrar funcionalidades.</li>
+            </ol>
+
+        <h3>Porque modelar antes de programar?</h3>
+        <p>Evita <b>retrabalho</b>, mais <b>comunicação clara</b>, consistência e <b>qualidade.</b></p>
+        <br>
+
+        <h2>Modelo Conceitual de dados</h2>
+        <h3>O que é?</h3>
+        <p><b>Desenho simples</b> que mostra como as <b>informações se organizam.</b> Mostra <b>o que</b> guardar e <b>não como.</b></p>
+        
+        <li>Conceitos fundamentais do modelo conceitual:</li>
+        <ol>
+            <li><b><em>Entidade:</em></b></li>
+            <br>
+            <ul>
+                <li>Coisas <b>importantes</b> do sistema.</li>
+                <li><b>Exemplos:</b> Clientes, produtos, pedidos...</li>
+            </ul>
+            <br>
+            <li><b><em>Atributo:</em></b></li>
+            <ul>
+                <li><b>Características</b> de cada entidade.</li>
+                <li><b>Exemplo:</b> Produto <em>(entidade)</em> contém: Nome, Preço, ID.</li>
+            </ul>
+            <br>
+            <li><b><em>Relacionamento:</em></b></li>
+            <ul>
+                <li>Como as <b>entidades se conectam</b></li>
+                <li><b>Exemplo:</b></li>
+                <ol>
+                    <li>Cliente <b>faz</b> pedido.</li>
+                    <li>Pedido <b>contém</b> produto.</li>
+                </ol>
+            </ul>
+            <br>
+            <li><b><em>Cardinalidade:</em></b></li>
+            <ul>
+                <li>Define <b>quantas instâncias</b> de uma entidade se <b>relacionam com outras.</b></li>
+                <li><b>Exemplo:</b></li>
+                <ul>
+                    <li>Um cliente pode fazer <b>muitos</b> pedidos <b>(1:N).</b></li>
+                    <li>Porém, um pedido <b>não pode ter vários clientes.</b></li>
+                </ul>
+            </ul>
+        </ol>
+        <br>
+
+        <h2>Modelo Entidade-Relacionamento (ER)</h2>
+        <h3>O que é?</h3>
+        <p>Desenvolvido por <b>Petter Chen (1976), visual,</b> intuitivo e universalmente <b>reconhecido</b> na área de dados.</p>
+        <img src="https://spaceprogrammer.com/wp-content/uploads/2017/10/diagrama-er-exemplo-1-N-004.jpg" alt="Foto de um modelo ER"> 
+
+        <li>Representações <b>gráficas:</b></li>
+        <ul></ul>
+
+    </body>
+</html>
