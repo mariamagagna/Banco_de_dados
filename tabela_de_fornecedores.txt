@@ -1,0 +1,11 @@
+Id, Data do Pedido, Status, Total do pedido
+01,20/02/2026,Processando,150
+02,25/02/2026,Pendente,130
+03,21/02/2026,Enviado,214
+04,22/02/2026,Enviado,230
+05,26/02/2026,processando,143
+06,24/022/2018,Processando,15
+07,28/02/2026,Enviado,204
+08,27/02/2019,Pendente,256
+09,27/02/2026,Enviado,302
+10,28/02/2021,Pendente,207

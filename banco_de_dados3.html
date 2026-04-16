@@ -3,7 +3,7 @@
         <title>Banco de dados: Aula 3</title>
     </head>
     <body>
-        <h1>Modelagem de dados</h1>
+        <h1><span style="color: blue ;">Modelagem de dados</span></h1>
 
         <h3>O que é modelagem de Banco de Dados??</h3>
         <p>Processo de <b>representar a estrutura lógica</b> de um sistema de informação,
@@ -69,7 +69,75 @@
         <img src="https://spaceprogrammer.com/wp-content/uploads/2017/10/diagrama-er-exemplo-1-N-004.jpg" alt="Foto de um modelo ER"> 
 
         <li>Representações <b>gráficas:</b></li>
-        <ul></ul>
+        <ul>
+            <li>Entidade: Retângulo.</li>
+            <span Style = "color: rgb(231, 84, 108);">Pensar como se fosse uma classe no Java!</span>
+            <li>Atributo: Elipse.</li>
+            <span Style = "color: rgb(231, 84, 108);">Pensar como se atributos fossem variáveis de uma classe em Java!</span>
+            <li>Relacionamento: Losango.</li>
+            <span Style = "color: rgb(231, 84, 108);">Pensar como se um relacionamento fosse um método ou uma referência ao objeto que conceta duas classes!</span>
+        </ul>
+        <br>
+        <li><b>Tipos de atributos:</b></li>
+        <ul>
+            <li><b><em>Atributo Simples (Atômico):</em></b> Não pode ser dividido em partes menores, como "CPF" ou "Idade".</li>
+            <br>
+            <li><b><em>Atributo Composto:</em></b> Pode ser subdividido em componentes menores que possuem significado próprio, ex: "Endereço" dividido em "Rua", "Número", "Bairro" e "CEP".</li>
+            <br>
+            <li><b><em>Atributo Monovalorado:</em></b> Assume apenas um valor para uma determinada entidade, ex: "Data de Nascimento".</li>
+            <br>
+            <li><b><em>Atributo Multivalorado:</em></b> Pode assumir múltiplos valores para uma única entidade, representado com elipse dupla, ex: "Telefones" de um cliente ou "Dependentes".</li>
+            <br>
+            <li><b><em>Atributo Derivado:</em></b> Seu valor é calculado ou obtido a partir de outro atributo, ex: "Idade" (derivado da "Data de Nascimento").</li>
+            <br>
+            <li><b><em>Atributo Determinante (ou Chave/Primário):</em></b> Identifica de forma única cada entidade no banco de dados, ex: "CPF" ou "ID_Funcionario".</li>
+            <br>
+        </ul>
+
+        <h2>Modelo Lógico</h2>
+        <h3>O que é?</h3>
+        <p><b>Traduz</b> o modelo <b>conceitual</b> para a <b>estrutura</b> do SGBD.</p>
+        <br>
+        <li><b>Definições:</b></li>
+        <ul>
+            <li><b>Tabelas</b> e seus nomes definitivos.</li>
+            <li><b>Colunas</b> com tipos de dados.</li>
+            <li><b>Chaves primárias</b> e estrangeiras.</li>
+            <li><b>Relacionamentos</b> implementada através de FK's.</li>
+            <li><b>Regras de negócio</b> básicas.</li>
+        </ul>
+        <h3>PK - Primary Key (Chave Primária)</h3>
+        <ul>
+            <li>É o <b>identificador único</b> de uma tabela.</li>
+            <li><b>Não se repete.</b></li>
+            <li><b>Não</b> pode ser <b>nulo.</b></li>
+        </ul>
+        <h3>FK - Foregin Key (Chave Estrangeira)</h3>
+        <ul>
+            <li>Campo que faz <b>ligação</b> com a <b>PK de outra tabela.</b></li>
+            <li><b>Pode repetir.</b></li>
+            <li>Cria o <b>relacionamento</b> entre tabelas.</li>
+        </ul>
+        <img src = "https://miro.medium.com/v2/resize:fit:1264/1*_P5bXXvcB_j1zDunuJea_g.png" alt = "Diferença entre PK e FK.">
+        <br>
+
+        <h2>Modelo Físico</h2>
+        <h3>O que é?</h3>
+        <p>É quando o <b>Banco de Dados</b> é <b>criado</b> de verdade no <b>computador.</b></p>
+        <br>
+        <ul>
+            <li><b><em>Índice:</em></b> Servem para <b>encontrar</b> dados <b>mais rápido.</b></li>
+            <li><b><em>Particionamento:</em></b> <b>Divide tabelas muito grades</b> em partes <b>menores.</b></li>
+            <li><b><em>Regras (Contraints):</em></b> Garante que os <b>dados estejam corretos.</b></li>
+            <li><b><em>Cardinalidade:</em></b> Um <b>registro</b> se relaciona com <b>outro.</b></li>
+        </ul>
+        
+        <br>
+        <h2>Modelo Lógico e Físico</h2>
+        <li>O modelo do Banco de Dados acontece em <b>camadas.</b> Cada nível de abstração nos <b>aproxima da implementação real,</b> sem perder a clareza do design original.</li>
+        <br>
+        <img src = "https://i0.wp.com/www.diegomacedo.com.br/wp-content/uploads/2011/12/negocio_ao_sistema-400x319.jpg?resize=400%2C319" alt = "Hierarquia de modelos conceituais.">
+
 
     </body>
-</html>
+</html> 

@@ -1,0 +1,276 @@
+<DOCTYPE! html>
+    <html lang="pt">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width-device-width, initial-scale=1.0">
+            <title>Flores amarelas</title>
+
+            <style>
+            *{box-sizing:border-box;}
+
+            body{
+                margin:0;
+                font-family:'Segoe UI', sans-serif;
+                background:linear-gradient(#fdf6e6,#f8e7c9);
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:100vh;
+                overflow:hidden;
+            }
+
+            .fondo{
+                position:fixed;
+                width:100%;
+                height:100%;
+                z-index:0;
+            }
+
+            .girassol{
+                position:absolute;
+                animation:caer linear infinite;
+            }
+
+            @keyframes caer{
+                0% {transform: translateY (-100px) rotate(0deg);}
+                100% {transform: translateY (110vh) rotate(360deg);}
+            }
+
+            .container{
+                width:500px;
+                height:680px;
+                background:#ffffff;
+                border-radius:25px;
+                box-shadow:0 20px 50px rgba(0,0,0,0.15);
+                position:relative;
+                z-index:2;
+                overflow:visible;
+            }
+
+            .decor-flor{
+                position:absolute;
+                width:180px;
+                z-index:5;
+                pointer-events:none;
+            }
+
+            .flor1{
+                top:-60px;
+                left:-60px;
+            }
+
+            .flor2{
+                bottom:-60px;
+                right:-60px;
+            }
+
+            .slide{
+                position:absolute;
+                width:100%;
+                height:100%;
+                display:none;
+                justify-content:center;
+                align-items:center;
+                flex-direction:column;
+                padding:25px;
+            }
+
+            .slide.active{
+                display:flex;
+            }
+
+            h1{
+                color:#6b8e23;
+                font-size:42px;
+                text-align:center;
+            }
+
+            .slide p{
+                text-align:center;
+                color:#5c7a2c;
+                font-size:18px;
+            }
+
+            .slide img{
+                width:460px;
+                max-width:120%;
+                margin-top:10px;
+            }
+
+            .botoes{
+                position:absolute;
+                bottom:15px;
+                width:100%;
+                display:flex;
+                justify-content:center;
+                gap:10px;
+            }
+
+            .botoes button{
+                background-color:#8fbf5a;
+                color:white;
+                border:none;
+                padding:10px 18px;
+                border-radius:25px;
+                font-size:14px;
+                cursor:pointer;
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse{
+                0% {transform:scale(1);}
+                50% {transform:scale(1.08);}
+                100% {transform:scale(1);}
+            }
+
+            .carta-slide{
+                justify-content:center;
+                align-items:center;
+            }
+
+            .hoja-carta{
+                width:85%;
+                max-width:380px;
+                height:85%;
+                background:#fffef8;
+                padding:30px 25px;
+                border-radius:10px;
+                box-shadow:0 10px 24px rgba(0,0,0,0.1);
+                overflow-y:auto;
+
+                font-size:18px;
+                line-height:1.8;
+                color:#222;
+
+                text-align:justify;
+            }
+
+            .fecha{
+                text-align:right;
+                margin-bottom:20px;
+            }
+
+            .destinatario{
+                margin-bottom:15px;
+                text-align:left;
+            }
+
+            .hoja-carta{
+                margin-bottom:16px;
+            }
+
+            .despedida{
+                margin-top:20px;
+            }
+
+            .firma{
+                margin-top:5px;
+            }
+
+            </style>
+        </head>
+
+        <body>
+            <div class="fondo" id="fondo"></div>
+            <div class="container">
+                <img class="decor-flor flor1" src="https://png.pngtree.com/png-clipart/20240310/original/pngtree-yellow-flowers-watercolor-png-image_14559868.png">
+                <img class="decor-flor flor2" src="https://png.pngtree.com/png-clipart/20240310/original/pngtree-yellow-flowers-watercolor-png-image_14559868.png">
+
+                <!--SLIDES-->
+                <div class="slide active">
+                    <h1>Cássio... 💛</h1>
+                    <p>Um pequeno recado para você...</p>
+                    <img src="https://i.pinimg.com/736x/09/d6/59/09d6591427c8e14397b06ecab9017de4.jpg">
+
+                    <div class="botoes">
+                        <button onclick="nextSlide()">Seguinte</button>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <p>Cada flor é uma pequena recordação <br> da pessoa especial que você é!</p>
+                    <img src="https://i.pinimg.com/736x/43/e7/98/43e798ebc28fa84a245c0997434303d0.jpg">
+
+                    <div class="botoes">
+                        <button onclick="prevSlide()">◀️</button>
+                        <button onclick="goTo(2)">Abrir carta 💌</button>
+                    </div>
+                </div>
+
+                <div class="slide carta-slide">
+                    <div class="hoja-carta">
+                        <div class="fecha">17 de abril 🌻</div>
+
+                        <p class="destinatario"><b>Meu amor,</b></p>
+                        <p>Os momentos mais bonitos são ao teu lado, e sempre são os melhores.
+                           Às vezes são as risadas inesperadas, as conversas longas que parecem não ter fim,
+                           os pequenos detalhes que quase ninguém nota ou simplesmente o fato de compartilharmos o tempo juntos. Sem precisamos fazer nada de especial
+                        </p>
+                        <p>
+                            Percebi que são justamente esses momentos simples que ficam mais gravados no coração.
+                            São essas coisas que você lembra mesmo quando tudo muda. Porque não se trata do que você faz, mas de com quem você convive.
+                        </p>
+                        <p>
+                            Cada lembrança contigo é guardada como algo especial, como se tivesse um brilho diferente.
+                            E, sinceramente, espero que ainda tenhamos muitos outros momentos para viver.
+                            Mais histótias para contar e mais memórias para guardar e mais memórias para guardar com carinho ao longo do tempo.                       
+                        </p>
+                        <p>
+                            Porque,no fim das contas, isso sempre será o mais valioso: os momentos compartilhados, emoções sinceras e tudo aquilo que,
+                            sem que percebamos, constrói algo belo entre nós. 
+                        </p>
+
+                        <p class="despedida">Com carinho,</p>
+                        <p class="firma"><b>Amor!💛</b></p>
+                    </div>
+
+                    <div class="botoes">
+                        <button onclick="goTo(0)">🏠 Início</button>
+                        <button onclick="prevSlide()">◀️</button>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                let current = 0;
+                const slides = document.querySelectorAll(".slide");
+
+                function showSlide(index){
+                    slides[current].classList.remove("active");
+                    current=index;
+                    slides[current].classList.add("active");
+                }
+
+                function nextSlide(){
+                    let next = current + 1;
+                    if(next>=slides.length) next=0;
+                    showSlide(next);
+                }
+
+                function prevSlide(){
+                    let prev = current - 1;
+                    if(prev<0) prev = slides.length -1;
+                    showSlide(prev);
+                }
+
+                function goTo(index){
+                    showSlide(index);
+                }
+
+                const fondo = document.getElementbyId("fondo");
+
+                for(let i = 0; i< 25; i++){
+                    let flor = document.createElement("img");
+                    flor.src = "https://www.pngmart.com/files/4/sunflower-PNG-HD.png";
+                    flor.className = "girassol";
+
+                    flor.style.left = Math.random()*100 + "vw";
+                    flor.style.animationDuration = (5+Math.random()*5)+"s";
+                    flor.style.width = (25+Math.random()*35)+"px";
+
+                    fondo.appendChild(flor);
+                }
+            </script>
+
+        </body>
+    </html>
